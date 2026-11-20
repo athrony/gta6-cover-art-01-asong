@@ -1,5 +1,5 @@
 [
-  { "name": "1-cover.jpg", "query": "?shot=cover&title=AFTER%20HOURS&kicker=A%20NIGHT%20ON%20THE%20COAST&subtitle=THE%20CITY%20NEVER%20SLEEPS", "w": 1080, "h": 1350 },
+  { "name": "1-cover.jpg", "query": "?shot=cover&title=VICE%20CITY&kicker=LEONIDA%20STATE%20%2F%20WANTED%2001&subtitle=MISSION%3A%20AFTER%20HOURS", "w": 1080, "h": 1350 },
   { "name": "2-editor.jpg", "query": "?shot=editor", "w": 1440, "h": 1000 },
-  { "name": "3-cover.jpg", "query": "?shot=cover&title=COASTAL%20DREAMS&kicker=THE%20LONG%20WAY%20HOME&subtitle=SALTY%20AIR%20%2F%20NEON%20NIGHTS", "w": 1080, "h": 1350 }
+  { "name": "3-cover.jpg", "query": "?shot=cover&title=BAY%20ESCAPE&kicker=COASTAL%20DIVISION%20%2F%20WANTED%2002&subtitle=MISSION%3A%20SUNSET%20RUN", "w": 1080, "h": 1350 }
 ]

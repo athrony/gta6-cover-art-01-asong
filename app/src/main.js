@@ -10,9 +10,9 @@ const formats = {
   landscape: { width: 1920, height: 1080, label: 'LANDSCAPE COVER' },
 };
 const panels = [
-  { name: '01  Feature', image: null, crop: { zoom: 1, x: 0, y: 0 } },
-  { name: '02  Skyline', image: null, crop: { zoom: 1.25, x: -12, y: -7 } },
-  { name: '03  Night drive', image: null, crop: { zoom: 1.45, x: 16, y: 12 } },
+  { name: '01  Bay escape', image: null, crop: { zoom: 1, x: 0, y: 0 } },
+  { name: '02  Neon strip', image: null, crop: { zoom: 1.18, x: 0, y: -15 } },
+  { name: '03  Partners', image: null, crop: { zoom: 1.65, x: 0, y: -10 } },
 ];
 let selectedPanel = 0;
 let format = 'portrait';
@@ -145,17 +145,18 @@ document.getElementById('export').addEventListener('click', () => {
   }, 'image/png');
 });
 
-async function loadSample(url) {
-  const image = await loadImage(url);
-  panels.forEach((panel) => { panel.image = image; });
+async function loadSample(urls) {
+  const images = await Promise.all(urls.map(loadImage));
+  panels.forEach((panel, index) => { panel.image = images[index] ?? images[0]; });
   refreshPanelList();
   draw();
 }
 
 const shot = new URLSearchParams(location.search).get('shot');
+await document.fonts.load('900 64px "Archivo Black"');
 if (shot) {
   await runShot(shot, new URLSearchParams(location.search), loadSample);
 } else {
-  await loadSample('./assets/coastal-drive.jpg');
+  await loadSample(['./assets/bay-escape.jpg', './assets/neon-boulevard.jpg', './assets/lead-portrait.jpg']);
 }
 selectPanel(0);
