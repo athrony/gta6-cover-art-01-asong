@@ -1,0 +1,11 @@
+Use case: stylized-concept
+Asset type: original sample photo for an offline poster-making app
+Primary request: create a cinematic, original open-world crime-drama-inspired editorial illustration of a fictional coastal city at sunset, with a coral-pink vintage convertible seen from behind driving along a palm-lined ocean boulevard toward a dense skyline
+Scene/backdrop: fictional Florida-like coastal city, layered hotel towers and a small marina in the distance, ocean visible on one side, no recognizable real landmarks
+Style/medium: premium hand-painted digital key art with semi-realistic forms, confident inked edges, subtle grain, high contrast, sophisticated magazine-cover finish; entirely original
+Composition/framing: square image; car low and near center, palm silhouettes frame the upper edges, clear skyline in the upper half, rich scene details still readable when cropped into narrow poster panels
+Lighting/mood: late golden hour fading into dusk, dramatic warm horizon glow and cool violet shadows
+Color palette: hot coral, electric pink, tangerine, turquoise, deep plum, midnight blue
+Materials/textures: glossy car paint, hazy humid atmosphere, fine film grain
+Constraints: no text, no letters, no logos, no watermark, no recognizable game characters or copyrighted visual assets
+Avoid: Rockstar, Grand Theft Auto, GTA, official game key art, weapons, brand marks, typography, blurry details

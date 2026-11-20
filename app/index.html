@@ -1,23 +1,57 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cover Snap</title>
-<link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17191b">
+  <title>Afterglow Studio | Cover maker</title>
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<main class="app">
-  <section class="controls">
-    <h1>Cover Snap</h1>
-    <p>A photo and a caption, made into a square cover.</p>
-    <label>Photo <input id="photo" type="file" accept="image/*"></label>
-    <label>Caption <input id="caption" type="text" maxlength="40" value="Sunset Heist"></label>
-    <button id="export" type="button">Export PNG 1080 x 1080</button>
-    <p id="status" role="status"></p>
-  </section>
-  <canvas id="cover" width="1080" height="1080" aria-label="The cover"></canvas>
-</main>
-<script type="module" src="./src/main.js"></script>
+  <header class="topbar">
+    <a class="wordmark" href="./" aria-label="Afterglow Studio home"><span class="mark">A</span><span>AFTERGLOW <i>STUDIO</i></span></a>
+    <div class="top-meta"><span class="local-dot"></span> LOCAL PROJECT <span class="meta-divider"></span> UNTITLED COVER</div>
+    <button id="export" class="export-button" type="button"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 2.5v9m0 0 3.5-3.5M10 11.5 6.5 8M3.5 13v3.5h13V13"/></svg> Export PNG <span id="export-size">1080 × 1350</span></button>
+  </header>
+  <main class="workspace">
+    <aside class="sidebar">
+      <div class="side-heading"><div><span class="eyebrow">COVER WORKSHOP</span><h1>Your night, your story.</h1></div><span class="step-count">01 / 03</span></div>
+      <div class="workflow"><span class="workflow-line"><i></i></span><span class="workflow-label active">Compose</span><span class="workflow-label">Personalize</span><span class="workflow-label">Export</span></div>
+      <section class="control-section photos-section">
+        <div class="section-heading"><div><span class="section-index">01</span><h2>Photo panels</h2></div><span id="photo-count" class="section-note">01 PHOTO</span></div>
+        <p class="section-copy">Choose a panel, then add a photo from your device.</p>
+        <div class="panel-list" id="panel-list" aria-label="Poster panels"></div>
+        <input id="photo-input" type="file" accept="image/*" multiple hidden>
+        <button class="add-photo" id="add-photo" type="button"><span>＋</span> Add photos <kbd>LOCAL</kbd></button>
+        <div class="crop-controls">
+          <div class="crop-title"><span>FRAME ADJUSTMENT</span><span id="crop-readout">100%</span></div>
+          <label class="range-label" for="zoom"><span>Zoom</span><input id="zoom" type="range" min="100" max="240" value="100"><output for="zoom">100%</output></label>
+          <label class="range-label" for="pan-x"><span>Horizontal</span><input id="pan-x" type="range" min="-100" max="100" value="0"><output for="pan-x">0</output></label>
+          <label class="range-label" for="pan-y"><span>Vertical</span><input id="pan-y" type="range" min="-100" max="100" value="0"><output for="pan-y">0</output></label>
+        </div>
+      </section>
+      <section class="control-section type-section">
+        <div class="section-heading"><div><span class="section-index">02</span><h2>Cover lines</h2></div><span class="section-note">LIVE TYPE</span></div>
+        <label class="field-label" for="kicker">Top line</label><input class="text-field small-field" id="kicker" type="text" maxlength="32" value="A NIGHT ON THE COAST">
+        <label class="field-label" for="title">Main title</label><input class="text-field title-field" id="title" type="text" maxlength="24" value="AFTER HOURS">
+        <label class="field-label" for="subtitle">Small caption</label><input class="text-field small-field" id="subtitle" type="text" maxlength="48" value="THE CITY NEVER SLEEPS">
+      </section>
+      <section class="control-section format-section">
+        <div class="section-heading"><div><span class="section-index">03</span><h2>Canvas size</h2></div><span class="section-note">PNG</span></div>
+        <div class="format-options" role="group" aria-label="Export size">
+          <button class="format-option" type="button" data-size="square"><span class="format-icon square-icon"></span><span>Square<small>1080 × 1080</small></span><span class="radio"></span></button>
+          <button class="format-option selected" type="button" data-size="portrait"><span class="format-icon portrait-icon"></span><span>Portrait<small>1080 × 1350</small></span><span class="radio"></span></button>
+          <button class="format-option" type="button" data-size="landscape"><span class="format-icon landscape-icon"></span><span>Landscape<small>1920 × 1080</small></span><span class="radio"></span></button>
+        </div>
+      </section>
+      <div class="privacy-note"><span class="lock-icon">⌑</span><span><strong>Your photos stay yours.</strong><br>Everything happens on this device.</span></div>
+    </aside>
+    <section class="preview-area" aria-label="Live cover preview">
+      <div class="preview-toolbar"><div class="preview-title"><span class="live-indicator"></span> LIVE PREVIEW <span class="preview-divider">/</span> <span id="preview-format">PORTRAIT COVER</span></div><button id="reset-crop" class="icon-button" type="button" title="Reset selected panel crop" aria-label="Reset selected panel crop"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 9a6 6 0 1 1 1.2 4.7M4 4v5h5"/></svg></button></div>
+      <div class="canvas-stage"><canvas id="cover" width="1080" height="1350" aria-label="Cover art preview"></canvas></div>
+      <div class="preview-footer"><span>DESIGNED IN AFTERGLOW</span><span>PREVIEW <b id="preview-dimensions">1080 × 1350</b></span></div>
+    </section>
+  </main>
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>

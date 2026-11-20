@@ -1,5 +1,5 @@
 [
-  { "name": "1-cover.jpg", "query": "?shot=cover&photo=pier&caption=Sunset%20Heist", "w": 1080, "h": 1080 },
-  { "name": "2-editor.jpg", "query": "?shot=editor&photo=boulevard&caption=Boulevard%20Queen", "w": 1280, "h": 720 },
-  { "name": "3-cover.jpg", "query": "?shot=cover&photo=boulevard&caption=Boulevard%20Queen", "w": 1080, "h": 1080 }
+  { "name": "1-cover.jpg", "query": "?shot=cover&title=AFTER%20HOURS&kicker=A%20NIGHT%20ON%20THE%20COAST&subtitle=THE%20CITY%20NEVER%20SLEEPS", "w": 1080, "h": 1350 },
+  { "name": "2-editor.jpg", "query": "?shot=editor", "w": 1440, "h": 1000 },
+  { "name": "3-cover.jpg", "query": "?shot=cover&title=COASTAL%20DREAMS&kicker=THE%20LONG%20WAY%20HOME&subtitle=SALTY%20AIR%20%2F%20NEON%20NIGHTS", "w": 1080, "h": 1350 }
 ]
